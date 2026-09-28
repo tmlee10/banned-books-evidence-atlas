@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: banned-books-evidence-atlas
+    runtime: static
+    buildCommand: unzip -o banned-books-project.zip && bash scripts/check-static.sh
+    staticPublishPath: ./dist
