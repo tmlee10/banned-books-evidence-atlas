@@ -4,7 +4,7 @@ Owned by tmlee10. This handover contains only the banned-books project.
 
 ## Project files
 
-`banned-books-project.zip` contains the complete 24-file project, including Python analysis and tests, source data, the prebuilt website, and downloadable research documents, PowerPoint and QGIS files. Extract it locally to work with the source. The original research package is inside `dist/downloads/banned-books-original-project.zip`.
+`banned-books-project.zip` contains the complete project, including Python analysis and tests, source data, the prebuilt website, and downloadable research documents, PowerPoint and QGIS files. Extract it locally to work with the source. The original research package is inside `dist/downloads/banned-books-original-project.zip`.
 
 This is a clean snapshot of the banned-books files from `danangnu/banned-books-evidence-atlas`, commit `0c872fed742c0403d69d4732a4799e1fb77e7ee0`. It excludes the separate redlining project and its Git history. The original repository remains in place. This repository does not transfer ownership of the existing Render service.
 
@@ -30,3 +30,10 @@ bash scripts/check-static.sh
 ```
 
 Nine tests and the static-file check passed during handover on 28 September 2026. Research findings cover July 2021 through June 2025. District-level inferential analysis remains pending required inputs. Read `RESEARCH_README.md` in the archive for definitions and limitations.
+
+
+## Website update — September 29, 2026
+
+The archive now includes an earlier-study section, an availability table for demographic and survey variables, the original report, and a CSV transcription of all 50 historical model predictions. Ohio’s 2022–2023 prediction is marked historical and unvalidated; the conflicting Idaho conclusion and negative model outputs are disclosed. No new model has been fitted, and no individual profiles are inferred from state-level data.
+
+Direct downloads include the V2 report, proposal, analysis plan, presentation and QGIS package. These retain the September 3 versions. Original survey responses and demographic model-input CSVs remain unavailable. The website keeps the exact reviewed RQ3 and data-quality checks.
