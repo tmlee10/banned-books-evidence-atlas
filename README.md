@@ -1,48 +1,38 @@
 # Banned Books Evidence Atlas
 
-Owned by tmlee10. This handover contains only the banned-books project.
+Owned by tmlee10. This repository contains only the banned-books project.
 
-## Project files
+## Website revision — October 1, 2026
 
-`banned-books-project.zip` contains the complete project, including Python analysis and tests, source data, the prebuilt website, and downloadable research documents, PowerPoint and QGIS files. Extract it locally to work with the source. The original research package is inside `dist/downloads/banned-books-original-project.zip`.
+The update adds a 2022–2023 population-rate map, a searchable and sortable 50-state table, count/rate charts, descriptive correlations and sensitivity results. It incorporates the revised comparison report and the full reproducibility download. Exact RQ3 and checks before analysis are preserved.
 
-This is a clean snapshot of the banned-books files from `danangnu/banned-books-evidence-atlas`, commit `0c872fed742c0403d69d4732a4799e1fb77e7ee0`. It excludes the separate redlining project and its Git history. The original repository remains in place. This repository does not transfer ownership of the existing Render service.
+The retained PEN workbook contains 3,362 event entries, including one Texas entry with no title. Counting only entries with nonblank titles produces 3,361. Both counting rules are documented. The reconstructed state comparison uses Census 2022 total residents, Gallup 2017 political shares and Pew 2014 religious shares. Florida’s rounded religion-category tie is preserved. Historical predictions remain unvalidated; no new causal model or forecast is claimed.
 
-## Deploy on Render
+## Files and deployment
 
-Connect this private repository from the intended owner's Render account. Create a Static Site using:
+- `banned-books-project.zip`: prebuilt website, corrected counting audit, source tables, research scripts and historical documents/QGIS files.
+- `banned-books-revised-data-code.zip`: the current report and full reproducibility download. This stays next to the project archive so each file fits the GitHub web-upload limit.
+- `render.yaml`: existing static-site deployment configuration.
 
-- Branch: `main`
-- Root directory: leave blank
-- Build command: `unzip -o banned-books-project.zip && bash scripts/check-static.sh`
-- Publish directory: `dist`
-- No environment variables or start command.
-
-Alternatively, use the root `render.yaml` as a Blueprint. The build extracts the prebuilt website; it does not fit statistical models. Verify the map, chart and both downloads before retiring any existing deployment.
-
-## Local verification
-
-After extraction:
+The Render build command remains:
 
 ```sh
-python3 -m unittest discover -s tests -v
-bash scripts/check-static.sh
+unzip -o banned-books-project.zip && bash scripts/check-static.sh
 ```
 
-Nine tests and the static-file check passed during handover on 28 September 2026. Research findings cover July 2021 through June 2025. District-level inferential analysis remains pending required inputs. Read `RESEARCH_README.md` in the archive for definitions and limitations.
+Publish directory: `dist`. The check script copies the separate reproducibility ZIP into the website downloads and checks 63 page references, data totals and download integrity. No server process or secret is required. Use the existing Render service; this commit does not create another service.
 
+## Reproduction and limitations
 
-## Website update — September 29, 2026
+After extracting the project:
 
-The archive now includes an earlier-study section, an availability table for demographic and survey variables, the original report, and a CSV transcription of all 50 historical model predictions. Ohio’s 2022–2023 prediction is marked historical and unvalidated; the conflicting Idaho conclusion and negative model outputs are disclosed. No new model has been fitted, and no individual profiles are inferred from state-level data.
+```sh
+python3 run_review.py
+python3 -m pip install -r state_reconstruction/requirements.txt
+python3 state_reconstruction/complete_state_analysis.py
+python3 analysis/export_state_map.py
+```
 
-Direct downloads include the V2 report, proposal, analysis plan, presentation and QGIS package. The report was revised September 29; the other documents retain the September 3 versions. Original survey responses and demographic model-input CSVs remain unavailable. The website keeps the exact reviewed RQ3 and data-quality checks.
+The core audit passes 16 tests. New source joins cover all 50 states. No-entry states are not treated as proven absence of bans. The 2024–2025 map remains a published-summary map; the new rate map covers 2022–2023 and uses residents, not students.
 
-
-## Historical forecast visuals
-Added all-state map and chart, Ohio comparison and an accessible state selector/table. Reproduce with `python analysis/forecast_visuals.py` (matplotlib required), then `python analysis/package.py`. The public 2022–2023 PEN workbook is retained in data/pen_2022_2023.xlsx. Aggregation checks both sheets independently, reconciles 3,362 events across 33 states and verifies the five published leading-state counts. Ohio has zero entries in this index, not verified zero bans. Eighteen historical predictions are negative and are marked invalid rather than clamped. No new model has been fitted. Official 2024–2025 row-level data and original survey inputs remain pending.
-
-
-## Affiliation and report revision — September 29, 2026
-
-The current report and website now reproduce the original five-state religious and political labels with an explicit source audit, rather than treating them as current verified classifications. Religion.xlsx and partisan.xlsx, source years, and respondent survey/codebook remain unavailable. The report includes the Ohio retrospective comparison and exact reviewed RQ3/checks. Recreate the historical affiliation figure with `python analysis/affiliation_visuals.py` (matplotlib required). CSV values are figure transcriptions, not refitted estimates or religion/party percentages. The proposal, plan, slides, QGIS files and full September archive retain their earlier versions.
+Original chapter-model training records, respondent survey/codebook, district enrollment and restriction histories, and the 2024–2025 event export are still required for the remaining analyses. Older slides/QGIS retain their September 3 versions. See the revised report for details.
