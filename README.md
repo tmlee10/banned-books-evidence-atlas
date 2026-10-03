@@ -45,3 +45,8 @@ The website now includes `gdelt-validation.html`, a homepage summary and six CSV
 `banned-books-gdelt-reviewed.zip` is a separate repository-root file, copied into `dist/downloads` by the existing build command. It contains the preserved exports and reproducible analysis snapshot, including its historical publication-status note. The previous state analysis, report, slides and QGIS files retain their stated versions.
 
 No new service, credential, billing change or BigQuery job is required. `scripts/check_gdelt.py` verifies the sample counts, record IDs, candidate results, exact RQ3 and local page links.
+
+
+## GDELT follow-up v12 — October 3, 2026
+
+The same 36 selected records now include 13 supported school-topic records, four other records and 19 unresolved records. Nine support an original district candidate. The CNN Davis article was recovered; posted district minutes verify a June 20, 2023 vote to reinstate the Bible. Actual reshelving, removal onset and duration remain unverified. No model or causal estimate was added. Version 11 tables remain available as history. Eight current and historical comparison tables are linked from the validation page; the package contains primary minutes, checksums and the complete offline pipeline.
