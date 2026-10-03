@@ -36,3 +36,12 @@ python3 analysis/export_state_map.py
 The core audit passes 16 tests. New source joins cover all 50 states. No-entry states are not treated as proven absence of bans. The 2024–2025 map remains a published-summary map; the new rate map covers 2022–2023 and uses residents, not students.
 
 Original chapter-model training records, respondent survey/codebook, district enrollment and restriction histories, and the 2024–2025 event export are still required for the remaining analyses. Older slides/QGIS retain their September 3 versions. See the revised report for details.
+
+
+## GDELT validation website update — October 3, 2026
+
+The website now includes `gdelt-validation.html`, a homepage summary and six CSV review tables. The frozen October 2 analysis contains 15,767 annual GDELT records, a 1,054-record candidate set and a fixed 36-record sample (12 school-topic, 4 public-library/unrelated, 20 unresolved). Eight sample records support at least one original district candidate. No new dated event links, causal claims or forecasts are accepted. Independent human review is pending.
+
+`banned-books-gdelt-reviewed.zip` is a separate repository-root file, copied into `dist/downloads` by the existing build command. It contains the preserved exports and reproducible analysis snapshot, including its historical publication-status note. The previous state analysis, report, slides and QGIS files retain their stated versions.
+
+No new service, credential, billing change or BigQuery job is required. `scripts/check_gdelt.py` verifies the sample counts, record IDs, candidate results, exact RQ3 and local page links.
