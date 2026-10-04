@@ -50,3 +50,10 @@ No new service, credential, billing change or BigQuery job is required. `scripts
 ## GDELT follow-up v12 — October 3, 2026
 
 The same 36 selected records now include 13 supported school-topic records, four other records and 19 unresolved records. Nine support an original district candidate. The CNN Davis article was recovered; posted district minutes verify a June 20, 2023 vote to reinstate the Bible. Actual reshelving, removal onset and duration remain unverified. No model or causal estimate was added. Version 11 tables remain available as history. Eight current and historical comparison tables are linked from the validation page; the package contains primary minutes, checksums and the complete offline pipeline.
+
+
+## Date audit v13 — October 4, 2026
+
+The original workbook confirms March 2023 for Indian River and Miami-Dade, and May 2023 for Davis. Earlier report prose was one month too early; the CSV conversion was correct. All 3,362 extracted rows were checked directly against the workbook. The Indian River month conflict is withdrawn. Other date/stage questions and exact restriction durations remain unresolved.
+
+The current validation page and archive include the corrections, workbook-cell audit, and a blank 36-record independent-review form. Review responses have not been received. The new comparison script validates returned JSON and lists disagreements without overwriting decisions. Current counts remain 13 supported school-topic records, four other records and 19 unresolved. All 116 output files regenerate byte-identically. Historical v11/v12 files preserve the prior record and should not be used for current month descriptions. No new BigQuery query, model, causal estimate or paid usage.
