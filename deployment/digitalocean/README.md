@@ -80,7 +80,9 @@ python3 -m unittest discover -s deployment/digitalocean -p test_deploy.py -v
 
 Verification requires no root privileges. The `--cache-dir` option can point to an existing directory containing the two pinned ZIPs to verify offline.
 
-If `banned-books-project.zip` changes in a future revision, update `PROJECT_SHA` in the installer after validating that archive. Updates to the two external research archives require updating both the pinned commit/checksums and the site's own download manifest.
+If `banned-books-project.zip` changes in a future revision, update `PROJECT_SHA` in the installer after validating that archive.
+
+November 17, 2026 update: `PROJECT_SHA` is set to the archive with the demographic profile, forecast test and 2026–27 outlook. Two further downloads, `banned-books-forecast-test-and-outlook.zip` and `banned-books-state-demographics-2025.zip`, must sit beside `banned-books-project.zip` in the extracted package; the installer checks them against `LOCAL_EXTRAS` and copies them into `dist/downloads`. They are not downloaded. To update the live site, upload the new package and run `install` as in sections 1–2; DNS and HTTPS steps are not repeated. `rollback` restores the November 11 release. Updates to the two external research archives require updating both the pinned commit/checksums and the site's own download manifest.
 
 ## Validation performed before delivery
 

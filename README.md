@@ -85,3 +85,11 @@ render.yaml and the existing supporting research archives are preserved.
 A GitHub push does not update DigitalOcean automatically; run the documented
 installer for future deployments. The old Render service is not retired by
 this change and may still deploy on commits if automatic deployment is enabled.
+
+## Demographics, forecast test and 2026–27 outlook — November 17, 2026
+
+`current-2025-2026.html` gains two sections. Section 06 compares the ten highest-rate states with the other forty on 13 Census measures (ACS 2025 1-year; 2020 Census urban share): they look much alike, and only the share under 18 differs beyond chance (p = 0.031), about what 13 measures would give by chance. Section 07 reports a forecast test, fitted on 2022–23 and scored on 2025–26 with only figures published before each school year began: repeating each state’s earlier recorded status got 36 of 50 states right; the population-and-election model got 27, picking up Ohio and Maryland but making 11 additional false calls. Adding a Census measure did not consistently help.
+
+It also shows the 2026–27 outlook as of November 17, 2026 (PEN’s 2025–26 results became available after the 2026–27 school year began). The starting point is each state’s 2025–26 recorded status, with the model alongside; they agree in 30 states and disagree in 20, and agreement is not evidence that either is right. Six states with 2022–23 entries and no 2025–26 count, where the methods disagree, are described as worth monitoring, not as predictions. The outlook rates use ACS 5-year 2019–23 population (Texas 276.4 per million); the map uses the July 2025 estimate (258.4), for the same 8,193 instances. The outlook concerns where PEN will record bans.
+
+New downloads: `banned-books-forecast-test-and-outlook.zip` and `banned-books-state-demographics-2025.zip`. They are stored beside `banned-books-project.zip` (like the GDELT package) to keep each upload under GitHub’s 25 MB limit. `check-static.sh` copies them into `dist/downloads` for Render; the DigitalOcean installer reads them from the deployment package, checks their SHA-256 values (`LOCAL_EXTRAS`) and copies them in. `PROJECT_SHA` is updated for the new archive. The presentation downloads are updated to the 47-slide deck. The DigitalOcean site changes only when the installer is rerun.

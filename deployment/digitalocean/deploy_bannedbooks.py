@@ -21,7 +21,14 @@ import zipfile
 DOMAIN = 'bannedbooks.research3.org'
 EXPECTED_IP = '143.198.36.166'
 UPSTREAM = '56d0fc2d22c43410685e2bfbfe3ff9430fb69794'
-PROJECT_SHA = 'f77fb0f44eeb52132c4f104ee1cd77147ad8ed85d6ad12174770d0e7f8456e8e'
+PROJECT_SHA = 'cb2068ac5117409f18c489121f284c60f2f60b154dfd1d9ebc5bdde52f565933'
+# Module 2 downloads (November 17, 2026), shipped beside banned-books-project.zip
+# in the deployment package so the project archive stays under GitHub's 25 MB
+# web-upload limit. Read locally; never downloaded.
+LOCAL_EXTRAS = {
+    'banned-books-forecast-test-and-outlook.zip': '9b8afe0a5cae42095f4db099b23171e0b0de60366fb4fc47f8e2d61e07d64916',
+    'banned-books-state-demographics-2025.zip': '396906827b6248b93004f40749d426c96c619f64adf0d8fdc88c5d2f5fbe06d6',
+}
 EXTRAS = {
     'banned-books-revised-data-code.zip': '944687e953be7ecd484c94b4db183dbb239c9fba181e504c58f5ca7b0091a022',
     'banned-books-gdelt-reviewed.zip': 'c2bad90c0952b20ea9eb52efde22b71fd3ef713beaee32dbbac7e0a901b70def',
@@ -84,6 +91,10 @@ def prepare(destination, cache):
                 temp.unlink(missing_ok=True)
         require_hash(cached, expected)
         shutil.copyfile(cached, destination / 'dist/downloads' / name)
+    for name, expected in LOCAL_EXTRAS.items():
+        local = PACKAGE / name
+        require_hash(local, expected)
+        shutil.copyfile(local, destination / 'dist/downloads' / name)
     for check in ('check_website.py', 'check_gdelt.py', 'check_current.py'):
         run(sys.executable, str(destination / 'scripts' / check))
     # Check all locally linked pages/assets, including links not covered by the original checks.
