@@ -21,7 +21,7 @@ import zipfile
 DOMAIN = 'bannedbooks.research3.org'
 EXPECTED_IP = '143.198.36.166'
 UPSTREAM = '56d0fc2d22c43410685e2bfbfe3ff9430fb69794'
-PROJECT_SHA = 'cb2068ac5117409f18c489121f284c60f2f60b154dfd1d9ebc5bdde52f565933'
+PROJECT_SHA = '12b2de3cf4ad6a47317697c9b68eecb43df97c041e33392156a4e0ce38eed174'
 # Module 2 downloads (November 17, 2026), shipped beside banned-books-project.zip
 # in the deployment package so the project archive stays under GitHub's 25 MB
 # web-upload limit. Read locally; never downloaded.
