@@ -84,7 +84,9 @@ If `banned-books-project.zip` changes in a future revision, update `PROJECT_SHA`
 
 November 17, 2026 update: `PROJECT_SHA` is set to the archive with the demographic profile, forecast test and 2026–27 outlook. Two further downloads, `banned-books-forecast-test-and-outlook.zip` and `banned-books-state-demographics-2025.zip`, must sit beside `banned-books-project.zip` in the extracted package; the installer checks them against `LOCAL_EXTRAS` and copies them into `dist/downloads`. They are not downloaded. To update the live site, upload the new package and run `install` as in sections 1–2; DNS and HTTPS steps are not repeated. `rollback` restores the November 11 release.
 
-November 19, 2026 update: `PROJECT_SHA` is set to the archive that adds interactive charts to `current-2025-2026.html` (`dist/charts-2025-2026.js`, no external libraries or network requests). The two Module 2 downloads beside the archive are unchanged. Install as in sections 1–2; `rollback` restores the previously installed release. Updates to the two external research archives require updating both the pinned commit/checksums and the site's own download manifest.
+November 19, 2026 update: `PROJECT_SHA` is set to the archive that adds interactive charts to `current-2025-2026.html` (`dist/charts-2025-2026.js`, no external libraries or network requests). The two Module 2 downloads beside the archive are unchanged. Install as in sections 1–2; `rollback` restores the previously installed release.
+
+November 20, 2026 update: `PROJECT_SHA` is set to the pre-proofing archive (wording corrections on the homepage and the 2025–26 page, corrected static map and vote-chart axis label, 49-slide presentation). The two Module 2 downloads beside the archive are unchanged. Install as in sections 1–2. Updates to the two external research archives require updating both the pinned commit/checksums and the site's own download manifest.
 
 ## Validation performed before delivery
 
