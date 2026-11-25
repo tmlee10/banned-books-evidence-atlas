@@ -86,7 +86,9 @@ November 17, 2026 update: `PROJECT_SHA` is set to the archive with the demograph
 
 November 19, 2026 update: `PROJECT_SHA` is set to the archive that adds interactive charts to `current-2025-2026.html` (`dist/charts-2025-2026.js`, no external libraries or network requests). The two Module 2 downloads beside the archive are unchanged. Install as in sections 1–2; `rollback` restores the previously installed release.
 
-November 20, 2026 update: `PROJECT_SHA` is set to the pre-proofing archive (wording corrections on the homepage and the 2025–26 page, corrected static map and vote-chart axis label, 49-slide presentation). The two Module 2 downloads beside the archive are unchanged. Install as in sections 1–2. Updates to the two external research archives require updating both the pinned commit/checksums and the site's own download manifest.
+November 20, 2026 update: `PROJECT_SHA` is set to the pre-proofing archive (wording corrections on the homepage and the 2025–26 page, corrected static map and vote-chart axis label, 49-slide presentation). The two Module 2 downloads beside the archive are unchanged. Install as in sections 1–2.
+
+November 25, 2026 update: `PROJECT_SHA` is set to the archive that adds the study switch (a bar at the top of the homepage and the 2025–26 page for moving between the previous study and the current analysis) and a side-by-side comparison page, `compare.html`. The two Module 2 downloads are unchanged. Install as in sections 1–2. Updates to the two external research archives require updating both the pinned commit/checksums and the site's own download manifest.
 
 ## Validation performed before delivery
 
